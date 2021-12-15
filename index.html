@@ -4,10 +4,31 @@
 <meta charset="utf-8">
 <title>品川ランチ</title>
 <script>
-    alert("Hello World!");
+  function SampleLunch() {
+    CANDIDATES = [
+      "中華🇨🇳(シンリ)",
+      "中華🇨🇳(1階)",
+      "インド🍛(B1階入口)",
+      "インド🍛(B1階奥)",
+      "インド🍛(3階)",
+      "イタリアン🍝🍕",
+      "メキシコ🇲🇽(アトレ)",
+      "OUTBACK🥩",
+      "寿司🍣",
+      "天麩羅🍤",
+      "蕎麦(1階)",
+      "蕎麦(土風炉)",
+    ]
+    result = CANDIDATES[Math.floor(Math.random() * CANDIDATES.length)];
+    document.getElementById('result').innerHTML = result;
+  }
 </script>
 </head>
 <body>
-    <p>Test</p>
+  <div style = "text-align:center;">
+    <h1>品川ランチ</h1>
+    <button type="button" onclick="SampleLunch()">Sample</button>
+    <h2><p id="result"></p><h2>
+  </div>
 </body>
 </html>
